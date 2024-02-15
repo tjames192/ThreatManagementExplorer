@@ -6,7 +6,7 @@ $days = 29
 $FromDateTime = [DateTime]::UtcNow.AddDays(-$days)
 $ToDateTime = [DateTime]::UtcNow
 
-$authSession = Get-SecurityAPISession -domain "byer.com" -credential (get-credential)
+$authSession = Get-SecurityAPISession -domain "domain.com" -credential (get-credential)
 
 $MaliciousEmailsReport = Get-MaliciousEmailsRemovedAfterDelivery -authSession $authSession -FromDateTime $FromDateTime -ToDateTime $ToDateTime
 $AllThreatInstances = $MaliciousEmailsReport.resultData.ThreatInstances

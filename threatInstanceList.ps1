@@ -4,7 +4,7 @@ function Get-SecurityAPISession {
 		$domain,
 		
 		[Parameter(Mandatory)]
-    [PSCredential]
+    		[PSCredential]
 		$Credential
 	)
 

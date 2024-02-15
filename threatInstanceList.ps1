@@ -40,40 +40,40 @@ function Get-SecurityAPISession {
 	
 	# Login to login.microsoftonline.com
 	$loginBody = @{
-		canary 			      = $authorizationConfig.canary
+		canary		  = $authorizationConfig.canary
 		CookieDisclosure  = '0'
-		ctx				        = $authorizationConfig.sCtx
-		flowToken 		    = $authorizationConfig.sFT
-		FoundMSAs 		    = $null
-		fspost 			      = '0'
-		hisRegion 		    = $null
-		hisScaleUnit 	    = $null
-		hpgrequestid 	    = $hpgrequestid
-		i13  			        = '0'
-		i19 			        = '17313'
-		i21 			        = '0'
+		ctx		  = $authorizationConfig.sCtx
+		flowToken	  = $authorizationConfig.sFT
+		FoundMSAs	  = $null
+		fspost 		  = '0'
+		hisRegion 	  = $null
+		hisScaleUnit 	  = $null
+		hpgrequestid 	  = $hpgrequestid
+		i13  		  = '0'
+		i19 		  = '17313'
+		i21 		  = '0'
 		IsFidoSupported   = '1'
-		isSignupPost 	    = '0'
-		login 			      = $Credential.userName
-		loginfmt 		      = $Credential.userName
-		LoginOptions 	    = '3'
-		lrt 			        = $null
-		lrtPartition 	    = $null
-		NewUser 		      = '1'
-		passwd 			      = $Credential.GetNetworkCredential().Password
-		PPSX			        = $null
-		ps   			        = '2'
+		isSignupPost 	  = '0'
+		login 		  = $Credential.userName
+		loginfmt 	  = $Credential.userName
+		LoginOptions 	  = '3'
+		lrt 		  = $null
+		lrtPartition 	  = $null
+		NewUser 	  = '1'
+		passwd 		  = $Credential.GetNetworkCredential().Password
+		PPSX		  = $null
+		ps   		  = '2'
 		psRNGCDefaultType = $null
 		psRNGCEntropy 	  = $null
-		psRNGCSLK 		    = $null
-		type 			        = '11'
+		psRNGCSLK 	  = $null
+		type 		  = '11'
 	}
 
 	$loginHeaders = @{
 		'Sec-Fetch-Dest' = 'document'
 		'Sec-Fetch-Site' = 'same-origin'
 		'Sec-Fetch-Mode' = 'navigate'
-		'Referer'		 = $authorizeUri
+		'Referer'	 = $authorizeUri
 	}
 
 	try {
@@ -97,7 +97,7 @@ function Get-SecurityAPISession {
 		'Sec-Fetch-Dest' = 'document'
 		'Sec-Fetch-Site' = 'same-origin'
 		'Sec-Fetch-Mode' = 'navigate'
-		'Referer'		     = $loginPost
+		'Referer'	 = $loginPost
 	}
 
 	$kmsiBody = @{
